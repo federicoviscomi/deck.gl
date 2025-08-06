@@ -204,3 +204,5 @@ export default [
     goldenImage: './test/render/golden-images/icon-lnglat.png'
   }
 ];
+
+// TODO add tests for sizeBasis?

@@ -26,8 +26,9 @@ export default defineConfig(async () => {
       'process.env.MapboxAccessToken': JSON.stringify(process.env.MapboxAccessToken)
     },
     server: {
-      open: true,
-      port: 8080
+      open: false,
+      port: 8081,
+      host: true
     },
     optimizeDeps: {
       esbuildOptions: {target: 'es2022'}

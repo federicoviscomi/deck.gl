@@ -113,6 +113,22 @@ const IconLayerAutoPackingExample = {
   }
 };
 
+const IconLayerSizeBasisExample = {
+  layer: IconLayer,
+  getData: () => dataSamples.points,
+  props: {
+    iconAtlas: 'data/icon-atlas.png',
+    iconMapping: dataSamples.iconAtlas,
+    sizeScale: 24,
+    getPosition: d => d.COORDINATES,
+    getColor: d => [64, 64, 72],
+    getIcon: 'marker',
+    
+    opacity: 0.8,
+    pickable: true
+  }
+};
+
 const GeoJsonLayerExample = {
   layer: GeoJsonLayer,
   getData: () => dataSamples.geojson,
@@ -461,6 +477,7 @@ export default {
     ArcLayer: ArcLayerExample,
     LineLayer: LineLayerExample,
     IconLayer: IconLayerExample,
+    'IconLayer (size basis)': IconLayerSizeBasisExample,
     'IconLayer (auto packing)': IconLayerAutoPackingExample,
     TextLayer: TextLayerExample,
     BitmapLayer: BitmapLayerExample,
